@@ -4,479 +4,1521 @@
     --primary-color: rgb(243, 80, 80);
     --color: rgb(255, 255, 255);
     --secondary-color:rgb(255, 216, 216);
-    --search-color:rgb(184, 46, 46);
-    --gray-color:  rgb(187, 187, 187);
-    --box-shadow-gray:rgba(255, 255, 255, 0.3);
-    --bold-color:  rgb(198, 9, 9);
-    --yellow-color: rgb(191, 191, 64);
-    --blue-color: rgb(43, 177, 255);
-    --purple-color: rgb(255, 145, 255);
-    --green-color: rgb(145, 255, 150);
-    --dark-yellow-color:rgb(74, 74, 33);
-    /* size */
-    --pramary-size: 24px;
+	--bg-color: #092136;
 
     /* shadow */
-    --praimary-shadow: 2px 2px 4px rgb(0,0,0);
+    --praimary-shadow: 5px 5px 4px rgb(0,0,0);
 }
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-html {
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'Anton', sans-serif;
 }
 
-/* navbar */
-#header {
-    width: 100%;
-    text-align: center;
-    align-items: center;   
-     width: 100%;  
-    background-color: var(--primary-color); 
-    height: 120px;
+#navbar {
+	position:absolute;  
+	width: 100%;
+	z-index: 1;
+}
+
+.bg-body-tertiarys {
+	background-color: var(--bg-color) ;
 } 
+
 .navbar-brand {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+justify-content: center;
+padding-left: 4rem;
 }
- .navbar-brand img {
-    width: 100px;
-    height: 70px;
+
+.navbar-brand img {	
+	width: 60px;
+	height: 60px;
 }
-.navbar-brand h1 {
-    color: var(--color);
-    font-family: inherit;  
+#header2 {
+	color: var( --color);
+}
+#navbar-togglers {
+	background-color: var(--color);
+}
+#navbar-togglers:focus {
+	box-shadow: 0 0 0 var(--blue-color);
+}
+ #nav-link   {
+	color: var(--color);
+	font-size: 1.2rem;
+	border-radius: 8px;
+}
+#nav-link:hover {
+	color: var( --bg-color);
+	background-color: var(--primary-color);
+	padding: 0.5rem 1rem;
+}
+
+#search {
+color: var(--blue-color);
+border: 1px solid var(--color)
+}
+
+#search::placeholder {
+	color: var(--bg-color);
+}
+
+#btn {
+	border: 1px solid var(--color);
+	color: var(--color);
+}
+
+#btn:hover {
+	color: var(--bg-color);
+	background-color: var(--color);
+}
+
+ /* header
+ right side */
+ #header-section {
+	position: relative;
+}  
+
+.h-section {
+	width: 100%;
+	height: 85%;
+	position:relative;
+	z-index: -1;
+	top: 10rem;	
+	margin-bottom: 25rem;
+}
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.h-title {
+	flex: 2;
+	margin-top: 6rem;
+}
+.h-title h2 {
+	font-size: 4rem;	
+	font-weight: 600;
+	color: var(--bg-color);
+}
+.h-title p {
+	font-size: 1.5rem;
+	color: var(--bg-color);
+}
+
+.first-seq {
+	top: 150px;
+	left: 40px;
+	width: 30rem;
+	height:30rem;
+	background-color: var(--primary-color);
+	position: relative;
+	border-radius: 8px;
+	 animation: slideInFromRight 5s forwards; 
+}
+
+.second-seq {
+	top: 2px;
+	left: 45%;
+	width: 30rem;
+	height: 30rem;
+	background-color: var(--bg-color);
+	position: absolute;
+	border-radius: 8px;
+	animation: slideInTopSide 5s forwards;
 } 
- .navbar-brand h1:hover {
-    color: var(--secondary-color);
-    text-shadow: var(--praimary-shadow);
+
+#h-image img {
+	width: 30rem;
+	height: 30rem;
+	position: absolute;
+	z-index: 1;
+	left: 52%;
+	top: 5rem;
+	border-radius: 27%;
+	box-shadow: var(--praimary-shadow);
+	animation: zoomIn 8s forwards;
+	transform-origin: center;
+	transform: scale(0);
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInTopSide {	
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0) ;
+	}
+}
+@keyframes zoomIn {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+/* HEADER SECTION  */
+.main-content {
+	width: 100%;
+	height:80%;
+	margin-top: 2rem;
+	background-color: var(--bg-color);
+}
+.container-1 {
+	font-family: inherit;
+	text-align: center;
+	padding: 4rem 2rem;
+}
+.content {
+	margin: 0 auto;
+	z-index: 1000;
+	position: relative;
+}
+.shape-1 {
+	background-color: var(--primary-color);
+	width: 80px;
+	position: absolute;
+	left: 20%;
+	height: 80px;
+	top: 105%;
+	border-radius: 50%;
+}
+.shape-2 {
+	background-color: var(--primary-color);
+	width: 80px;
+	position: absolute;
+	height:80px;
+	border-radius: 50%;
+	left: 90%;
+	top: 55%;
+	z-index: -1;
+}
+.content h1 {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+	font-size: 50px;
+}
+
+.content p {
+	color: white;
+	line-height: 30px;
+	font-size: 18px;
+	margin-bottom: 3rem;
+}
+.button {
+	border: 1px solid var(--primary-color);
+	padding: 0.5rem 1rem;
+	background-color: var(--primary-color);
+	color: white;
+	font-weight: 400;
+	font-size: 19px;
+	border-radius: 8px;
+}
+.button:hover {
+	border: 1px solid white;
+	background-color: white;
+	color: var(--primary-color);
+}
+
+ /* main section  */
+ section.main-section {
+width: 100%;
+
+}
+.main-title {
+	max-width: 50%;
+	text-align: center;
+	margin: 6rem auto 4rem auto;
+}
+.main-title h1 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: var(--primary-color);
+}
+.main-title p {
+	font-size: 1.8rem;
+	color: var(--primary-color);
+	line-height: 50px;
+	font-size: 400;
+}
+.first-shape {
+	width: 59%;
+	height: 16rem;
+	top: 128rem;
+	left: 22rem;
+	background-color: var(--primary-color);
+	position: absolute;
 } 
-.nav-item a {
-    color: var(--color);
-    font-size: var(--pramary-size);
-    font-weight: bold;
+.first-section {
+	width:75%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+padding-left: 15rem;
 }
-.nav-item a:hover {
-    color: var(--secondary-color);
- text-shadow: var(--praimary-shadow); 
-}
-
-.dropdown-menu li a {
-        color: var(--primary-color);
-        background-color: white;
-
-} 
-.navbar-nav .nav-link:hover {
-    background-color: var(--color);
-    color: var(--primary-color);
-}
-.navbar-nav .nav-link {
-    padding: 19px;
+.first-section img {
+	width: 18rem;
+	height:18rem;
 }
 
-/* image section */
-.main-container {
-    width: 100%;
- background-color: var(--primary-color); 
-    position: relative;
+/* section 4 */
+.section-4 {
+	width: 100%;
+	position: relative;
+	height: 60rem;
+	margin-top: 10rem
 }
-#main-container {
-    background-color: white;
+.section-4 img {
+	width: 100%;
+	height: 40rem;
 }
-.image img {
-   width: 100%;
-    height: 700px;
-}
-/* iraq info */
-.main-sub {
-    width: 100%;
-    max-width: 70rem;
-    margin: 1rem auto;
-    border: 2px solid var(--primary-color);
-    padding: 0.5rem 2rem;
-    border-radius: 9px;
-    box-shadow: 2px 4px 6px black; 
-}
-.main-sub p {
-    font-family: inherit;
-    font-size: 2rem;
-    text-align: left;
-}
-
-.triangle {
-    width: 100%;
-    height: 140px;
-    /* for reverse traingle */
-  clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
-    /*  for triangle clip-path: polygon(0% 100%, 100% 100% ,50% 0%); */
-    background-color: rgb(246, 90, 90);
-    margin-bottom: 1rem;
-}
-
-.subject-container {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    border: 2px solid var(--gray-color);
-    width: 30%;
-    padding: 2rem 1rem; 
-    border-radius: 9px;
-    box-shadow: 2px 2px 4px var(--secondary-color);
-    background-color: var(--box-shadow-gray) ;
-}
-.subject-container h2{
- font-size: 90px;
- color: red;
- text-align: center;
- font-family: 'Kenia', cursive;
-
-}
-/* vedio section */
-.vedio-container {
-    margin: 2rem 0; 
-}
-.row {
-    width: 100%;
-    height: 30rem;
-    background-color: var(--primary-color);
-    padding-left: 2rem;
-}
- img {
-    width: 40rem;
-    height: 30rem;
-    padding: 0 1rem;
-} 
-.summary {
-     margin-top: 2rem;
-    display: block;
-    margin-left: 4rem;
-    background-color: var(--color);
-  max-width: 30rem;
-  border: 2px solid var(--color);
-  border-radius: 6px;
-}
-.sub-summary {
-    margin: 1rem;
-}
-.sub-summary img {
-    width: 10rem;
-    height: 5rem;
-}
-.sub-summary a {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    text-decoration: none;
-}
-.sub-summary a:hover {
-    color: var(--bold-color);
-}
-
-/* more information */
 .info {
- width: 100%;
- /* height: 60%; */
- background-color: var(--color);
- margin-top: 2rem;
- margin-bottom: 0;
+	width: 100%;
+	background-color: var(--bg-color);
+	height: 30rem;
+	position: absolute;
+	top: 30rem;
+}
+.land-info {
+display: flex;
+width: 100%;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin: -10rem 0;
+}
+.land-info-whole-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+.land-info-section {
+	border: 1px solid white;
+	background-color: white;
+	width: 18rem;
+	height: 25rem;
+	border-radius: 13% 13%;
+	padding: 1rem;
+	margin-right: 1.5rem;
+	text-align: center;
+	box-shadow: 4px 2px 4px var(--bg-color);
+}
+.land-info-section img {
+	width: 90px;
+	height: 90px;
+	color: var(--primary-color);
+}
+.land-info-section h1 {
+	font-size: 30px;
+	color: var(--bg-color);
+	font-weight: 700;
+	padding:1rem;
+}
+.land-info-section p {
+	font-size:15px;
+	color: var(--bg-color);
+	font-weight: 400;
+}
+.land-info-section button {
+border: none;
+background-color: white;
 }
 
-.head {
-    text-align: center;
-    padding-top: 2rem;
-    margin-bottom: 1.5rem;
-    font-size: var(--pramary-size);
-    font-family: inherit;
-    color: var(--primary-color); 
+.land-info-section button a {
+	text-decoration: none;
+	color: var(--primary-color);
+	padding-top: 1.5rem;
+	font-weight: 700;
+	border-bottom: 2px solid var(--primary-color);
 }
-.sub-info {
-    display: flex;
+.land-info-section button a:hover {
+	color: var(--bold-color);
+	border-bottom: 2px solid var(--bold-color);
 }
 
-/* first subject yellow-color */
-.subject, .subject1,.subject2,.subject3 {
-    border: 2px solid var(--yellow-color);
-    width: 30rem;
-    background-color: var(--yellow-color);
+/* SECTION-5 CONATCT */
+.section-5 {
+	height: 75rem;
+	margin-top: 6rem;
 }
-.subject h1, .subject1 h1, .subject2 h1, .subject3 h1 {
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
+.contact {
+	text-align: center;
 }
-.subject p, .subject1 p, .subject2 p,.subject3 p  {
-    color: var(--color);
-    font-size: 1.5rem;
-    padding: 0 1rem;
+.first-contact img {
+	margin-top: 6rem;
+	width: 50rem;
+	height: 50rem;
+	border-radius: 50%;
+	position: relative;
 }
-.subject button, .subject1 button, .subject2 button, .subject3 button{
-    margin: 2rem 4rem;
-    padding: 0.5rem 1.5rem;
-    background-color: var(--yellow-color);
-    border: 3px solid var(--color);
-    color: var(--color);
-    font-size: 1.5rem;
-    border-radius: 40px;
-   
+.contact-shape-1{	
+	border: 60px solid var(--primary-color);
+	width: 20rem;
+	height: 20rem;
+	position: absolute;
+	border-radius: 50%;
+	left: 65rem;
 }
-.subject1 {
-    background-color: var(--blue-color);
-    border: 2px solid var(--blue-color);
-   
+.contact-shape-2 {
+	background-color:  var(--secondary-color);
+	width: 15rem;
+	height: 15rem;
+	position: absolute;
+	border-radius: 50%;
+	left: 30rem;
+	margin-top: -15rem;
+}
+.contact-info {
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	width: 40rem;
+	height: 37rem;
+	position: absolute;
+	margin-top: -20rem;
+	margin-left:60rem;
+}
+.contact-info {
+	padding: 2rem;
+}
+.contact-info h1 {
+	font-size: 4rem;
+	color: var(--color);
+}
+.form-table {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-bottom: 1rem;
+}
+.form-table label {
+	color: var(--color);
+}
+.form-table input, textarea {
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	border: none;
+}
+
+.form button {
+	width: 100%;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	font-size: 20px;
+	color: var(--primary-color);
+}
+.form button:hover {
+	background-color: var(--bg-color);
+	color: var(--color);
+}
+
+ /* Footer section  */
+.footer {
+	height: 7rem;
+	background-color: var(--bg-color);
+}
+.footer-info {
+	text-align: center;
+	padding: 1rem 0;
+}
+.footer-info p {
+	color: var(--color);
+}
+.footer-info a {
+	color: var(--color);
+	text-decoration: none;
+}
+.footer-info a:hover, a:active {
+	color: var(--primary-color);
+}
+
+
+@media screen and (min-width:1024px) and (max-width:2560px) {
+	.content {
+		max-width: 60%;
+	}
+}
+
+ @media screen and (min-width:320px) and (max-width:768px) {
+	.container {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.h-title {
+		margin-top: 0;
+		text-align: center;
+	}	
+	.land-info-whole-section {
+		flex-direction: column;
+	}
 } 
-.subject1 button{
-    background-color: var(--blue-color);
+
+@media screen and (max-width:1440px) {
+	.container {
+		justify-content: left;
+	}
+	#h-image img {
+		width: 25rem;
+		height: 25rem;
+		top: 10%;
+	}
+	 .first-seq {
+		width: 25rem;
+		height: 25rem;
+		left: 300px;
+		top: 100px;
+	}	
+	.second-seq {
+		width: 25rem;
+		height: 25rem;
+	} 
+	.shape-1 {
+		top: 900px;
+		left: 300px;
+	}
+	.first-rec {
+		width:23rem;
+		height: 23rem;
+	}
+	.first-shape {
+		width: 80%;
+		height: 18rem;
+		top: 120rem;
+		left: 10rem;
+	} 
+	.main-title {
+		max-width: 90%;
+	}
+	.contact-info {
+		margin-left:42rem;
+	}
+	.contact-shape-2 {
+left: 20rem;
+	}
+	.contact-shape-1 {
+		left: 50rem;
+	}
+} 
+
+
+@media screen and (min-width:1024px) and (max-width:1188px) {
+	#h-image img {
+		left: 55%;
+		top: 7%;
+		width: 20rem;
+		height: 20rem;
+	}
+	.first-seq {
+		width:20rem;
+		height: 20rem;
+		top: 60px;
+	}
+	.second-seq {
+		width: 20rem;
+		height: 20rem;
+	}
+
+ .h-title h2 {
+		font-size: 2.5rem;	
+		font-weight: 700;
+	}
+	.h-title p {
+		font-size: 1.3rem;
+	}
+ .main-content {
+		height:100%;
+}  
+ .shape-1 {
+	top: 820px;
+	left: 230px;
 }
-.subject2{
-    border: 2px solid var(--purple-color) ;
-    background-color: var(--purple-color);
+.shape-2 {
+	background-color: var(--primary-color);
+	width: 70px;
+	height:70px;
+	left: 90%;
+	top: 60%;
+} 
+.first-section img {
+	width: 15rem;
+	height:15rem;
+} 
+.first-shape {
+	height: 16rem;
+	top: 126rem;
+	left: 12rem;
+} 
+.land-info-section {
+	width: 13rem;
+	height: 26rem;
+	padding: 1rem;
 }
-.subject2 button{
-    background-color: var(--purple-color);
+.contact-info {
+	margin-left:42rem;
 }
-.subject3 {
-    border: 2px solid var(--green-color);
-    background-color: var(--green-color);
+.contact-shape-2 {
+left: 8rem;
 }
-.subject3 button{
-    background-color: var(--green-color);
+.contact-shape-1 {
+	left: 38rem;
+	width: 15rem;
+	height: 15rem;
 }
-#subject a {
-    color: var(--color);
-    text-decoration: none;
+.first-contact img {
+	width: 45rem;
+	height:45rem;
 }
-#subject a:hover {
-    color: var(--dark-yellow-color);
+.contact-info {
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	width: 35rem;
+	position: absolute;
+	margin-top: -20rem;
+	margin-left:25rem;
 }
-#subject button:hover {
-    background-color: var(--color);
+.contact-info h1 {
+	font-size: 3rem;
 }
-/* life section */
-.containers {
-    width: 100%;
-    height: 50%;
-    margin-top: 2rem;
-    display: flex;
 }
 
-.img-life img {
- width: 100%;
- border-radius: 0 50% 0 0;
- /* 120px 20px 120px 20px; */
+@media screen and (min-width:1189px) and (max-width:1300px) {
+	.first-seq {
+		width:20rem;
+		height: 20rem;
+		left: 95%;
+	}
+	.second-seq {
+		width: 20rem;
+		height: 20rem;
+		left:40rem;
+	}
+	#h-image img {
+		left: 60%;
+		top: 7%;
+		width: 20rem;
+		height: 20rem;
+	}
+	.shape-1 {
+		top: 840px;
+		left: 250px;
+	}
+	.first-section img {
+		width: 17rem;
+		height:17rem;
+	} 
+	.first-shape {
+		height: 13rem;
+		top: 124rem;
+		left: 12rem;
+	} 
+	.land-info-section {
+		width: 13rem;
+		height: 26rem;
+		padding: 1rem;
+	}
 }
-.col-lg-4 {
-    max-width: 600px;
-    margin: 4rem auto;
-    text-align: center;
-
+@media screen and (min-width:901px) and (max-width:1023px){
+	.first-seq {
+		width:19rem;
+		height: 19rem;
+		left: 3%;
+	}
+	.second-seq {
+		width: 19rem;
+		height: 19rem;
+		left:65%;
+	}
+	#h-image img {
+		left: 60%;
+		top: 18%;
+		width: 19rem;
+		height: 19rem;
+	}
+	.shape-1 {
+		top: 840px;
+		left: 100px;
+	}
+	.shape-2 {
+		top: 25rem;
+	}
+	.h-title h2 {
+		font-size: 2.5rem;
+	}
+	.first-section img {
+		width: 14rem;
+		height:14rem;
+	} 
+	.first-shape {
+		height: 13rem;
+		top: 118rem;
+		left: 12rem;
+	} 
+	.main-title h1 {
+		font-size: 2rem;
+	}
+	.main-title p {
+		font-size: 1.5rem;
+	}
+	.land-info-section {
+		width:12rem;
+		height: 30rem;
+	}
+	.contact-info {
+		margin-left:42rem;
+	}
+	.contact-shape-2 {
+	left: 4rem;
+	width: 12rem;
+	height: 12rem;
+	margin-top: -15rem;
+	}
+	.contact-shape-1 {
+		left: 35rem;
+		width: 15rem;
+		height: 15rem;
+	}
+	.first-contact img {
+		width: 45rem;
+		height:45rem;
+	}
+	.contact-info {
+		width: 35rem;
+		margin-left:25rem;
+		margin-top: -15rem;
+	}
+	.contact-info h1 {
+		font-size: 3rem;
+	}
+	
 }
-.col-lg-4 h2 {
- color: var(--primary-color);
- font-size: 60px;
+@media screen and (min-width:769px) and (max-width:900px){
+	.first-seq {
+		width:15rem;
+		height: 15rem;
+		left: 45%;
+	}
+	.second-seq {
+		width: 15rem;
+		height: 15rem;
+		left:55%;
+	}
+	#h-image img {
+		left: 60%;
+		top: 18%;
+		width: 15rem;
+		height: 15rem;
+	}
+	.shape-1 {
+		top: 840px;
+		left: 100px;
+	}
+	.shape-2 {
+		top: 25rem;
+	}
+	.h-title h2 {
+		font-size: 2.5rem;
+	}
+	.first-section  {
+	padding-left: 0;
+	} 
+	.first-section img {
+		width: 12rem;
+		height:12rem;
+	} 
+	.first-shape {
+		height: 13rem;
+		top: 123rem;
+		left: 6rem;
+	} 
+	.main-title h1 {
+		font-size: 2rem;
+	}
+	.main-title p {
+		font-size: 1.5rem;
+	}
+	.land-info-whole-section {
+		flex-direction: column;
+	}
+	.land-info-section {
+		width: 22rem;
+		height: 18rem;
+		margin: 1rem;
+	}
+	.land-info-section h1 {
+		font-size: 28px;
+		font-weight: 500;
+		padding:0.5rem;
+	}
+	.land-info-section p {
+		font-size:13px;
+		font-weight: 300;
+	}
+	.land-info-section img {
+		width: 70px;
+		height: 70px;
+	}
+	.land-info {
+		margin: -15rem 0;
 }
-.col-lg-4 button {
-    margin-top:10px;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-     background-color: var(--color);
-     border: 2px solid var(--primary-color);
-   }
 
-   .col-lg-4 button a {
-    font-size: 25px;
-    text-decoration: none;
-    color: var(--primary-color);
-   }
-   .col-lg-4 button:hover {
-    background-color: var(--primary-color);
-   }
-   .col-lg-4 button a:hover {
-    color: var(--color);
-   }
-   /* footer */
-   .footer {
-    height: 160px;
-    background-color: var(--primary-color);
-   }
-   .sub-footer {
-    display: flex;
-    justify-content: space-around; 
-    text-align: center;
-   }
-   #icons {
-    margin: 2rem 0;
-    color: var(--color);
-    font-size: 3rem;
-   }
-   #icons:hover {
-    color: var(--gray-color);
-    cursor: pointer;
-   }
-
-   #icons a {
-    margin: 0 1rem;
-   }
-   .imag-footer {
-    display: flex;
-   }
- .sub-footer a {
-    margin: 2rem;
-    text-decoration: none;
-    color: var(--color);
-   } 
-   .sub-footer a:hover {
-    color: var(--gray-color);
-   } 
-   .imag-footer img {
-    width: 100px;
-    height: 70px;
-   } 
-
-    @media screen and (max-width: 1024px)  {
-        div.summary {
-     margin: 1.5rem 0;
-       }
-       .sub-summary a {
-        font-size: 18px;
-    }
-    .main-sub {
-        max-width: 60rem;
-    }
-    #subject button {
-        margin-top: 0.2rem;
-        font-size: 1rem;
-        padding: 0.5rem;
-    } 
-    .life {
-        width: inherit;
-    }
-    }
-
-    @media screen and (max-width: 768px) {
-        .subject-container h2 {
-            font-size: 50px;
-        }
-        .main-sub {
-            max-width: 45rem;
-        }
-        .main-sub p {
-            font-size: 1.3rem;
-        }
-        .summary {
-          margin-left: 0;
-        }
-        .info {
-            margin-top: 28rem;
-        }
-        .sub-info {
-            display: block;
-        }
-        #subject {
-            width: inherit;
-        }
-     
-    }
-
-    @media screen and (max-width: 425px) {
-        .subject-container h2 {
-            font-size: 20px;
-        }
-        .main-sub p {
-            font-size: 1rem;
-        }
-        .sub-summary a {
-            font-size: 12px;
-        }
-        .info {
-            margin-top: 28rem;
-        }
-        .sub-info {
-            display: block;
-        }
-        #subject {
-            width: inherit;
-        }
-        #subject h1 {
-            font-size: 2rem;
-            padding-top: 0.5rem;
-        }
-        #subject p {
-            font-size: 1.4rem;
-        }
-
-        #subject button {
-            margin-top: 0.2rem;
-        } 
-        .imag-footer img {
-            width: 70px;
-            height: 50px;
-            margin-top: 5px;
-            margin-left: 40px;
-           }
-           #icons {
-            font-size: 1rem;
-           }
-           .sub-footer {
-            display: block;
-           }
-        
-.containers {
-    width: inherit;
-    margin-top: 1.5rem;
+.contact-info {
+	margin-left:42rem;
 }
-.col-lg-4 h2 {
-    font-size: 2rem;
-
+.contact-shape-2 {
+left: 4rem;
+width: 12rem;
+height: 12rem;
+margin-top: -10rem;
 }
-.img-life img {
-    width: 100%;
-    height: 25rem;
-    border-radius:9px
+.contact-shape-1 {
+	left: 30rem;
+	width: 15rem;
+	height: 15rem;
+}
+.first-contact img {
+	width: 40rem;
+	height:40rem;
+}
+.contact-info {
+	width: 35rem;
+	margin-top: 5rem;
+	margin-left:10rem;
+}
+.contact-info h1 {
+	font-size: 3rem;
+}
+.section-5 {
+	height: 90rem;
+}
+}
+
+@media screen and (max-width:768px) {
+	.first-seq {
+		left: 40%;
+		top: 13rem;
+		width: 25rem;
+		height: 25rem;
+	}
+	.second-seq {
+		left:3rem;
+		top: 19rem;
+		width: 25rem;
+		height: 25rem;
+	}
+	#h-image img {
+		left: 20%;
+		top: 60%;
+		width: 25rem;
+		height: 25rem;
+	}
+	.shape-1 {
+		top: 78rem;
+		left: 60px;
+	}
+	.h-section {
+		margin-bottom: 30rem;
+	}
+	.first-section {
+		width:100%;
+	padding-left:4rem;
+		flex-direction: column;
+	}
+	.first-section img {
+		width: 35rem;
+		height:30rem;
+	}
+	.main-title {
+		max-width: 100%;
+	}
+	.main-title h1 {
+		font-size: 2rem;
+	}
+	.main-title p {
+		font-size: 1.5rem;
+	}
+
+	.first-shape {
+		width: 55%;
+		height: 110rem;
+		left: 17rem;
+		top:150rem;
+	} 
+	.main-title {
+		max-width: 90%;
+	} 
+	.land-info-section {
+		width: 22rem;
+		height: 18rem;
+		margin: 1rem;
+	}
+	.land-info-section h1 {
+		font-size: 28px;
+		font-weight: 500;
+		padding:0.5rem;
+	}
+	.land-info-section p {
+		font-size:13px;
+		font-weight: 300;
+	}
+	.land-info-section img {
+		width: 70px;
+		height: 70px;
+	}
+	.land-info {
+		margin: -15rem 0;
+}
+.contact-info {
+	margin-left:42rem;
+}
+.contact-shape-2 {
+left: 4rem;
+width: 12rem;
+height: 12rem;
+margin-top: -10rem;
+}
+.contact-shape-1 {
+	left: 27rem;
+	width: 15rem;
+	height: 15rem;
+}
+.first-contact img {
+	width: 35rem;
+	height:35rem;
+}
+.contact-info {
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	width: 35rem;
+	position: absolute;
+	margin-top: 5rem;
+	margin-left:10rem;
+}
+.contact-info h1 {
+	font-size: 3rem;
+}
+.section-5 {
+	height: 90rem;
+}
+}
+
+@media screen and (min-width:601px) and (max-width:767px) {
+	#h-image img {
+		width: 22rem;
+		height: 22rem;
+		left: 25%;
+		top: 300px;
+	}
+	.h-title h2 {
+		font-size: 2.4rem;
+	}
+	.first-seq {
+		width:22rem;
+		height: 22rem;
+		top: 10rem;
+		left: 40%;
+	}
+	.second-seq {
+		width: 22rem;
+		height: 22srem;
+		top: 15rem;
+		left: 7%;
+	}
+	.shape-2 {
+		top: 75%;
+		left: 70%;
+	} 
+	.shape-1 {
+	   top: 1150px;
+	   left:15px;
+	}
+	.land-info-section {
+		width: 18rem;
+		height: 19rem;
+		margin: 0.5rem;
+
+	}
+	.land-info-section h1 {
+		font-size: 28px;
+		font-weight: 500;
+		padding:0.5rem;
+	}
+	.land-info-section p {
+		font-size:13px;
+		font-weight: 300;
+	}
+	.land-info-section img {
+		width: 70px;
+		height: 70px;
+	}
+	.land-info {
+		margin: -15rem 0;
+} 
+
  
-   }
-   .col-lg-4 button a {
-    font-size: 15px;
-   }    
+.first-section img {
+	width: 30rem;
+	height:28rem;
+}
+
+.first-shape {
+	width: 50%;
+	height: 100rem;
+	left: 17rem;
+	top:155rem;
+} 
+
+.contact-info {
+	margin-left:42rem;
+}
+
+.contact-shape-1 {
+	left: 20rem;	
+}
+.first-contact img {
+	width:35rem;
+	height:35rem;
+}
+.contact-info {
+	width: 35rem;
+	position: absolute;
+	margin-top: 5rem;
+	margin-left:2.5rem;
+}
+.contact-info h1 {
+	font-size: 3rem;
+}
+.section-5 {
+	height: 90rem;
+}
+}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+	#h-image img {
+		width: 20rem;
+		height: 20rem;
+		left: 19%;
+		top: 300px;
+	}
+	.h-title h2 {
+		font-size: 2.4rem;
+	}
+	.first-seq {
+		width:20rem;
+		height: 20rem;
+		top: 10rem;
+		left: 35%;
+	}
+	.second-seq {
+		width: 20rem;
+		height: 20rem;
+		top: 15rem;
+		left: 4%;
+	}
+	.shape-2 {
+		top: 75%;
+		left: 70%;
+	} 
+	.shape-1 {
+	   top: 1090px;
+	   left:15px;
+	}
+	.first-shape {
+		width: 50%;
+	} 
+	.first-section {
+	padding-left:0;
+}
+	.first-section img {
+		width: 28rem;
+		height:28rem;
+	}
+	.first-shape {
+		height: 100rem;
+		left: 15rem;
+		top:170rem;
+	} 
+	.land-info {
+		flex-direction: column;
+	}
+	.section-4 {
+		height: 80rem;
+	}
+	.land-info-section {
+		width: 25rem;
+		height: 17rem;
+		margin: 1rem;
+	}
+	.info {
+		height: 50rem;
+	}
+	.land-info-section h1 {
+		font-size: 25px;
+		font-weight: 500;
+		padding:0.5rem;
+	}
+	.land-info-section p {
+		font-size:13px;
+		font-weight: 300;
+	}
+	.land-info-section img {
+		width: 70px;
+		height: 70px;
+	}
+	.land-info {
+		margin: -29rem 0;
+}
+.contact-shape-2 {
+	width: 9rem;
+	height: 9rem;
+	margin-top: -5rem;
+	}
+	.contact-shape-1 {
+		left: 17rem;
+		width: 12rem;
+		height: 12rem;
+border: 40px solid var(--primary-color);
+	}
+	.first-contact img {
+		width:25rem;
+		height:25rem;
+	}
+	.contact-info {
+		width: 25rem;
+		margin-left:5rem;
+	}
+	.contact-info h1 {
+		font-size: 2rem;
+	}
+	.section-5 {
+		height: 75rem;
+	}
+}
+
+@media screen and (min-width:425px) and (max-width:500px) {
+	#h-image img {
+		width: 17rem;
+		height: 17rem;
+		left: 15%;
+		top: 300px;
+	}
+	.h-title h2 {
+		font-size: 2rem;
+	}
+	.h-title p {
+		font-size: 1.2rem;
+	}
+	.first-seq {
+		width:17rem;
+		height: 17rem;
+		top: 10rem;
+		left: 120px;
+	}
+	.second-seq {
+		width: 17rem;
+		height: 17rem;
+		top: 15rem;
+		left: 3%;
+	}
+	.content h1 {
+		font-size: 32px;
+	}
+	.shape-2 {
+		top: 80%;
+		left: 60%;
+	} 
+	.shape-1 {
+	   top: 1000px;
+	   left:15px;
+	}
+	.first-section {
+		padding-left: 0;
+	}
+	.first-section img {
+		width: 22rem;
+		height:22rem;
+	}
+	.first-shape {
+		height: 100rem;
+		left: 15rem;
+		top:170rem;
+	} 
+	.main-container {
+		flex-direction: column;
+	 }	
+	.main-title h1 {
+		font-size: 1.8rem;
+	}
+	.main-title p {
+		font-size: 1.3rem;
+	}
+	.first-shape {
+		width: 55%;
+		height: 80rem;
+		left: 10rem;
+		top:165rem;
+	} 
+	.main-title {
+		max-width: 90%;
+	} 
+	.land-info {
+		flex-direction: column;
+	}
+	.section-4 {
+		height: 80rem;
+	}
+	.land-info-section {
+		width: 25rem;
+		height: 17rem;
+		margin: 1rem 0;
+	}
+	.info {
+		height: 50rem;
+	}
+	.land-info-section h1 {
+		font-size: 25px;
+		font-weight: 500;
+		padding:0.5rem;
+	}
+	.land-info-section p {
+		font-size:13px;
+		font-weight: 300;
+	}
+	.land-info-section img {
+		width: 70px;
+		height: 70px;
+	}
+	.land-info {
+		margin: -29rem 0;
+}
+
+.contact-shape-2 {
+width: 9rem;
+height: 9rem;
+margin-top: -5rem;
+}
+.contact-shape-1 {
+	left: 12rem;
+	width: 12rem;
+	height: 12rem;
+	border: 30px solid var(--primary-color);
+}
+.first-contact img {
+	width:25rem;
+	height:25rem;
+}
+.contact-info {
+	width: 25rem;
+	margin-left:1rem;
+}
+.contact-info h1 {
+	font-size: 2rem;
+}
+.section-5 {
+	height: 75rem;
+}
+}
+
+@media screen and (min-width:376px) and (max-width:424px) {
+	#h-image img {
+		width: 15rem;
+		height: 15rem;
+		
+}
+.first-seq {
+	width:15rem;
+	height: 15rem;
+	top: 1rem;
+	left: 1px;
+}
+.second-seq {
+	width: 15rem;
+	height: 15rem;
+	left: 35%;
+	top: 20rem;
+} 
+.shape-2 {
+	width: 75px;
+	height: 75px;
+	top: 80%;
+	left: 60%;
+} 
+.shape-1 {
+   width: 75px;
+   height: 75px;
+   top: 950px;
+   left: 5px;
+}
+.content h1 {
+	font-size: 30px;
+}
+.h-title h2 {
+	font-size: 2rem;
+}
+.h-section{
+	margin-bottom: 25rem;
+}
+.main-container {
+	flex-direction: column;
+ }
+ .main-title {
+	max-width: 90%;
+ }
+ .image-contanier {
+	flex-direction: column;
+ }
+.main-title h1 {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+.main-title p {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	line-height: 30px;
+	font-size: 400;
+}
+.first-section {
+	width:100%;
+	padding-left: 0;
+	flex-direction: column;
+}
+.first-section img {
+	width: 20rem;
+	height: 20rem;
+}
+.first-shape {
+	height:70rem;
+	width: 100px;
+}
+.land-info {
+	flex-direction: column;
+}
+.section-4 {
+	height: 80rem;
+}
+.land-info-section {
+	width: 18rem;
+	height: 17rem;
+	margin: 1rem;
+}
+.info {
+	height: 50rem;
+}
+.land-info-section h1 {
+	font-size: 20px;
+	font-weight: 500;
+	padding:0.5rem;
+}
+.land-info-section p {
+	font-size:13px;
+	font-weight: 300;
+}
+.land-info-section img {
+	width: 55px;
+	height: 55px;
+}
+.land-info {
+	margin: -29rem 0;
+}
+.contact-shape-2 {
+	width: 9rem;
+	height: 9rem;
+	margin-top: -5rem;
+	}
+	.contact-shape-1 {
+		left: 12rem;
+		width: 10rem;
+		height: 10rem;
+		border: 40px solid var(--primary-color);
+	}
+	.first-contact img {
+		width:20rem;
+		height:20rem;
+	}
+	.contact-info {
+		width: 20rem;
+		margin-left:2rem;
+	}
+	.contact-info h1 {
+		font-size: 1.7rem;
+	}
+	.section-5 {
+		height: 70rem;
+	}
+	
+}
+
+@media screen and (max-width:375px) {
+	.first-section img {
+		width: 19rem;
+		height:19rem;
+	}
+	.first-section {
+		width:100%;
+		padding-left:0;
+	}
+	.first-shape {
+		width: 6rem;
+		height: 60rem;
+		left: 15rem;
+		top:160rem;
+	} 
 }
 @media screen and (max-width:320px) {
-    .col-lg-4 h2 {
-        font-size: 1rem;
-    }
-    .img-life img {
-        width: 10rem;
-        height: 15rem;
-       }
-       .col-lg-4 {
-        margin: 0.5rem 0;
-       }
-       .col-lg-4 button a {
-        font-size: 15px;
-       }
-       .col-lg-4 button {
-        padding: 0.5rem;
-       }
-       .imag-footer img {
-        width: 70px;
-        height: 50px;
-        margin-top: 5px;
-        margin-left: 40px;
-       }
-       #icons {
-        font-size: 1rem;
-       }
-       .sub-footer {
-        display: block;
-       }
-  
-    
+	.first-shape {
+		width: 10rem;
+		height: 60rem;
+		left: 9rem;
+		top:289%;
+	} 
+	.first-section img {
+		width: 17rem;
+		height:17rem;
+	}
+	.first-section {
+		width:100%;
+		padding-left:0;
+	}
+	.main-title h1 {
+		font-size: 1.3rem;
+	}
+	.main-title p {
+		font-size: 1rem;
+		line-height: 30px;
+	}
+	.main-title {
+		max-width: 90%;
+	} 
 }
 
-
-
+@media screen and (min-width:320px) and (max-width:375px) {
+	.navbar-brand {
+	padding-left: 1rem;
+	}
+	.container {
+		margin-bottom: 18rem;
+	}
+	.h-title h2 {
+		font-size: 20px;
+	}
+	.h-title p {
+		font-size: 18px;
+	}
+	 #h-image img {
+		width: 12rem;
+		height: 12rem;
+		left: 20%;
+		top: 190px;
+	}
+	.first-seq {
+		width:12rem;
+		height: 12rem;
+		left:1rem;
+		top: 5rem;
+	}
+	.second-seq {
+		width: 12rem;
+		height: 12rem;
+		top: 10rem;
+		left: 7rem;
+	} 
+	.shape-1 {
+		width:70px;
+		height: 70px;
+		left: 10%;
+		top: 120%;
+	} 
+	.shape-2 {
+		width:70px;
+		height: 70px;
+		left: 70%;
+		top: 80%;
+	} 
+	.content h1 {
+		font-size: 18px;
+	}
+	.content p {
+		font-size: 17px;
+	}
+	.h-section {
+		margin-bottom: 10rem;
+ }
+ .land-info {
+	flex-direction: column;
+}
+.section-4 {
+	height: 80rem;
+}
+.land-info-section {
+	width: 18rem;
+	height: 17rem;
+	margin: 1rem;
+}
+.info {
+	height: 50rem;
+}
+.land-info-section h1 {
+	font-size: 20px;
+	font-weight: 500;
+	padding:0.5rem;
+}
+.land-info-section p {
+	font-size:13px;
+	font-weight: 300;
+}
+.land-info-section img {
+	width: 55px;
+	height: 55px;
+}
+.land-info {
+	margin: -29rem 0;
+}
+.contact-shape-2 {
+	width: 7rem;
+	height: 7rem;
+	margin-top: -4rem;
+	}
+	.contact-shape-1 {
+		left: 10rem;
+		width: 9rem;
+		height: 9rem;
+		border:  30px solid var(--primary-color);
+	}
+	.first-contact img {
+		width:18rem;
+		height:18rem;
+	}
+	.contact-info {
+		width: 19rem;
+		margin-left: 5%;
+	}
+	.contact-info h1 {
+		font-size: 1.5rem;
+	}
+	.section-5 {
+		height: 70rem;
+	}
+	
+}
 

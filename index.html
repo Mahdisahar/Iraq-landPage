@@ -1,198 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Kenia&display=swap" rel="stylesheet"> 
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
-    <script src="app.js" defer></script>
-
-    <title>Iraq</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Iraq-website/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+	<title>Iraq Website</title>
 </head>
 <body>
-<!-- navbar -->
-<section id="header">
-    <!-- bg-light -->
-    <nav class="navbar navbar-expand-md">
-        <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="/images/iraq.png" alt="iraq map"><h1>Iraq</h1></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" id="btn"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-link nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-link nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-link nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Provences
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Al_Anbar_Governorate">Al Anbar</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Babil_Governorate">Babylon</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Basra_Governorate">Basra</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Nineveh_Governorate">Nineveh</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Baghdad_Governorate">Baghdad</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Sulaymaniyah_Governorate">Sulaymaniyah</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Saladin_Governorate">Saladin</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Dhi_Qar_Governorate">Dhi Qar</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Al-Q%C4%81disiyyah_Governorate">Al-Qadisiyyah</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Diyala_Governorate">Diyala</a></li> 
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Duhok_Governorate">Duhok</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Erbil_Governorate">Erbil</a></li> 
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Karbala_Governorate">Karbala</a></li>
-                  <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kirkuk_Governorate">Kirkuk</a></li>     
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-</section>
+	<!-- NAVBAR SECTION -->
+	<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiarys">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+	            <img src="/Iraq-website/images/iraq.png" alt="iraq map">
+				<h1 id="header2">Iraq</h1>
+			</a>
 
-<!-- image section -->
- <section class="main-container">
- <div class="image-container">
-   <div class="subject-container">
-    <h2> Republic of Iraq</h2>
-  </div>
-  <div class="image">
-      <img src="/images/191106-iraq-violence-mc-1108.jpg" alt="iraq">
-  </div>
- </div>
-</section>
+		  <button id="navbar-togglers" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-md-0">
+			  <li class="nav-item">
+				<a id="nav-link" class="nav-link active" aria-current="page" href="#home">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a id="nav-link" class="nav-link" href="#about">about</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a id="nav-link" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  Provinces
+				</a>
+				<ul class="dropdown-menu">
+				  <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+				  <li><a class="dropdown-item" href="#">Another action</a></li>
+				  <li><hr class="dropdown-divider"></li>
+				  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Al_Anbar_Governorate">Al Anbar</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Babil_Governorate">Babylon</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Basra_Governorate">Basra</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Nineveh_Governorate">Nineveh</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Baghdad_Governorate">Baghdad</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Sulaymaniyah_Governorate">Sulaymaniyah</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Saladin_Governorate">Saladin</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Dhi_Qar_Governorate">Dhi Qar</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Al-Q%C4%81disiyyah_Governorate">Al-Qadisiyyah</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Diyala_Governorate">Diyala</a></li> 
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Duhok_Governorate">Duhok</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Erbil_Governorate">Erbil</a></li> 
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Karbala_Governorate">Karbala</a></li>
+					<li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kirkuk_Governorate">Kirkuk</a></li>     
+				  </ul>
+				</ul>
+			  </li>
+			  <!-- <li class="nav-item">
+				<a class="nav-link disabled" aria-disabled="true">Disabled</a>
+			  </li> -->
+			</ul>
+			<form class="d-flex" role="search">
+			  <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button id="btn" class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
 
-<div class="triangle"></div>
+	  <!-- HEADER SECTION -->
 
-<!-- iraq info -->
-<section class="main-container" id="main-container">
-  <div class="main-sub">
-    <p>Iraq is a country in Western Asia. It is bordered by Turkey to the north, Iran to the east, the Persian Gulf and Kuwait to the southeast, Saudi Arabia to the south, Jordan to the southwest and Syria to the west. The capital and largest city is Baghdad. Iraq is home to diverse ethnic groups including Iraqi Arabs, Kurds, Turkmens, Assyrians, Armenians, Yazidis, Mandaeans, Persians and Shabakis with similarly diverse geography and wildlife. The vast majority of the country's 44 million residents are Muslims – the notable other faiths are Christianity, Yazidism, Mandaeism, Yarsanism and Zoroastrianism.The official languages of Iraq are Arabic and Kurdish; others also recognised in specific regions are Neo-Aramaic, Turkish and Armenian.</p>
-  </div>
-</section>
+	  <!-- right side -->	  
+	  <section id="home" class="h-section">
+		<div class="container"> 
+      <div id="header-section">
+		<div class="h-title">
+			<h2>Republic of Iraq</h2>
+			<p>Iraq, officially the Republic of Iraq, <br/>is a country in West Asia. <br/>It is a federal parliamentary republic <br/>that consists of 19 governorates.</p>
+		</div>
+	  </div>
+
+	  <!-- left side -->
+	  <div id="h-image">
+		<div class="first-seq"></div>
+		<div class="second-seq"></div>
+		<img src="/Iraq-website/images/Iraq.jpg" alt="iraq" />	
+	 </div>	
+	    </div>
+	  </section>
+
+	  <section id="about" class="main-content">
+		<div class="container-1">
+			<div class="shape-1"></div>
+			<div class="content">
+				<h1>Land</h1>
+				<p>Iraq is one of the easternmost countries of the Arab world, located at about the same latitude as the southern United States. It is bordered to the north by Turkey, to the east by Iran, to the west by Syria and Jordan, and to the south by Saudi Arabia and Kuwait. Iraq has 36 miles (58 km) of coastline along the northern end of the Persian Gulf, giving it a tiny sliver of territorial sea. Followed by Jordan, it is thus the Middle Eastern state with the least access to the sea and offshore sovereignty.</p>
+				<h1>Climate of Iraq</h1>
+				<p>Iraq has two climatic provinces: the hot, arid lowlands, including the alluvial plains and the deserts; and the damper northeast, where the higher elevation produces cooler temperatures. In the northeast cultivation fed by precipitation is possible, but elsewhere irrigation is essential.</p>
+                <button class="button">Learn More</button>
+				<div class="shape-2"></div>
+			</div>
+		</div>
+	  </section>
+
+	  <!-- main section -->
+	  <section class="main-section">
+		<div class="main-container">
+		   <div class="main-title">
+				<h1>Discover the best places to visit</h1>
+               <p>This country is one that is covered in natural beauty, such as the winding waterways of the mighty Tigris and Euphrates rivers. It is often known as the Cradle of Civilization and this is a reference to its ancient Mesopotamian cities that are famed for their innovations in science, writing, literature, medicine, theology and law.</p>
+			</div>
+		
+		<div class="image-contanier">
+			<div class="first-shape"></div>
+				<div class="first-section">
+					<img src="/Iraq-website/images/B.jpg" alt="malwya">
+					<img src="/Iraq-website/images/A.jpg" alt="nasib">
+					<img src="/Iraq-website/images/10.jpeg" alt="karbalaa">
+					<img src="/Iraq-website/images/Iraq-2117x1406.jpg" alt="nasib">
+				</div> 		
+		</div>	
+	   </div>	
+	  </section>
+
+	  <section class="section-4">
+		<img src="/Iraq-website/images/11.jpg" alt="view">
+	 <div class="info">
+			<div class="land-info">
+				<div class="land-info-whole-section">
+					<div class="land-info-section">
+						<img src="/Iraq-website/images/undraw_people_re_8spw(1).svg" alt="people">
+						<h1>People</h1>
+							<p>Iraq,created by combining three separate Ottoman provinces in the aftermath of World War I
+								is one of the most religiously diverse in the Middle East.
+							</p>
+						 <button><a href="https://www.britannica.com/place/Iraq/Climate#ref22935">MORE</a></button>
+					</div>
+	
+					<div class="land-info-section">
+						<img src="/Iraq-website/images/undraw_factory_dy-0-a.svg" alt="factory">
+						<h1>Economy</h1>
+						<p>Iraq economy was based almost exclusively on agriculture until the 1950s, but after the 1958 revolution economic development was considerable.</p>
+					   <button><a href="https://www.britannica.com/place/Iraq/Economy">MORE</a></button>
+					</div>
+	
+				</div>
+				<div class="land-info-whole-section">
+					<div class="land-info-section">
+						<img src="/Iraq-website/images/undraw_finance_re_gnv2.svg" alt="people">
+						<h1>Finance</h1>
+							<p>All banks and insurance companies were nationalized in 1964. The Central Bank of Iraq has the sole right to issue the dinar, the national currency. 
+							</p>
+						 <button><a href="https://www.britannica.com/place/Iraq/Climate#ref22935">MORE</a></button>
+					</div>
+	
+					<div class="land-info-section">
+						<img src="/Iraq-website/images/undraw_services_re_hu5n.svg" alt="people">
+						<h1>Services</h1>
+							<p>The service sector suffered during the embargo. Retail sales fell off as unemployment rose and as the buying power of the dinar sharply decreased like other sector.
+							</p>
+						 <button><a href="https://www.britannica.com/place/Iraq/Climate#ref22935">MORE</a></button>
+					</div>
+				</div>		
+			</div>
+		</div>
+	  </section>
+
+	  <!-- Contact section -->
+	  <section class="section-5">
+		<div class="contact-shape-1"></div>
+		<div class="contact">
+			<div class="first-contact">
+				<img src="/Iraq-website/images/C.jpg" alt="nature">
+			</div>
+			<div class="contact-shape-2"></div>	
+			<div class="contact-info">
+				<h1>Join Our Newsletter</h1>
+				<div class="form">
+					<div class="form-table">
+						<label for="text" id="text">Name</label>
+					<input type="text" placeholder="Enter Your Name">
+					</div>
+
+					<div class="form-table">
+						<label for="email" id="text">Email</label>
+					<input type="email" placeholder="Enter Your Email">
+					</div>
+
+					<div class="form-table">
+						<label for="text" id="text">Message</label>
+					<textarea name="text" id="text" cols="30" rows="7" placeholder="Enter Your Message"></textarea>
+					</div>
+					<button>Submit</button>					
+				</div>
+			</div>
+		</div>
+		
 
 
-<!-- slider -->
-<section class="main-container">
-  <div class="row">
-    <div class="col-lg-8">
-      <div class="slick slideshow">
-        <div><img src="/images/Karbala-City.jpg" alt="Karbala-city" /></div>
-        <div><img src="/images/iraqiprotestsintahrirsquare.jpg" alt="iraq-people" /></div>
-        <div><img src="/images/iraq-bridge.jpg" alt="iraq-bridge" /></div>
-        <div><img src="/images/Iraq-2117x1406.jpg" alt="iraq-grass" /></div>
-        <div><img src="/images/191106-iraq-violence-mc-1108.jpg" alt="iraq" /></div>
-        <div><img src="/images/1501626509373.jpg" alt="iraq-news" /></div>
-    </div>
-    </div>
-<div class="col-lg-4">
-<div class="summary">
-  <div class="sub-summary">
-    <a href="https://www.britannica.com/place/Iraq"><img src="/images/iraq-map.jpg" alt="mosque">Introduction</a>
-  </div>
+	  </section>
 
-  <div class="sub-summary">
-    <a href="https://www.britannica.com/summary/Iraq"><img src="/images/mosul.jpg" alt="mosul">Summary</a>
-  </div>
-
-  <div class="sub-summary">
-    <a href="https://www.britannica.com/place/Iraq/Education#ref22956"><img src="/images/culture.jpg" alt="Iraq culture">Iraq Culture</a>
-  </div>
-
-  <div class="sub-summary">
-    <a href="https://www.britannica.com/place/Iraq/History"><img src="/images/mosque.jpg" alt="Iraq culture">Iraq History</a>
-  </div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- more information-->
-<section class="info">
-  <div class="head">
-    <h1>Learn More about Iraq</h1>
-  </div>
-  <div class="sub-info">
-      <div class="subject" id="subject">
-      <h1>Land</h1>
-      <p>Iraq is one of the easternmost countries of the Arab world, located at about the same latitude as the southern United States.</p>
-     <button><a href="https://www.britannica.com/place/Iraq#ref22922">Learn More</a></button>
-  </div>
-
-  <div class="subject1" id="subject">
-    <h1>People</h1>
-    <p>Iraq,created by combining three separate Ottoman provinces in the aftermath of World War I
-      is one of the most religiously diverse in the Middle East.
-    </p>
-   <button><a href="https://www.britannica.com/place/Iraq/Climate#ref22935">Learn More</a></button>
-</div>
-
-<div class="subject2" id="subject">
-  <h1>Economy</h1>
-  <p>Iraq economy was based almost exclusively on agriculture until the 1950s, but after the 1958 revolution economic development was considerable.</p>
- <button><a href="https://www.britannica.com/place/Iraq/Economy"> Learn More</a></button>
-</div>
-
-
-<div class="subject3" id="subject">
-  <h1>Government</h1>
-  <p>From 1968 to 2003 Iraq was ruled by the Baʿath Party.
-    Under a provisional constitution adopted by the party in 1970, Iraq was confirmed as a republic
-  </p>
- <button><a href="https://www.britannica.com/place/Iraq/Government-and-society">Learn More</a></button>
-</div>
-</div>
-</section>
-
-<!-- life section -->
-<section class="life" id="about">
-  <div class="containers">
-      <div class="col-lg-8">
-    <div class="img-life">
-      <img src="/images/1.jpg" alt="iraq">  
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <h2>If you want to read more about Iraq and Watch vedios</h2>
-    <button><a href="https://www.hrw.org/middle-east/north-africa/iraq">Click here</a></button>
-  </div>
-  </div>
-
-</section>
-
-<!-- footer -->
-<section class="footer">
-  <div class="sub-footer">
-    <a class="imag-footer" href="#"><img src="/images/iraq.png" alt="iraq map"><h1>Iraq</h1></a>
-  
-    <div class="icons">
-    <i class="fa-brands fa-facebook" id="icons"><a href="https://www.facebook.com/"></a></i>
-    <i class="fa-brands fa-twitter" id="icons"><a href="https://twitter.com/"></a></i>
-    <i class="fa-brands fa-youtube" id="icons"><a href="s://www.youtube"></a></i>
-    <i class="fa-brands fa-instagram" id="icons"><a href="https://www.instagram.com/"></a></i>
-    <i class="fa-brands fa-linkedin" id="icons"><a href="https://ca.linkedin.com/"></a></i>
-
-  </div>
-  </div>
-</section>
+	  <!-- Footer section -->
+	  <section class="footer">
+		<div class="footer-info">
+			<p>Created by Sahar Mahdi</p>
+			<p>Published in GitHub <a href="https://github.com/Mahdisahar">@Mahdisahar</a></p>
+		</div>
+	  </section>
 </body>
 </html>
